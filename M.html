@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,787 +12,1009 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-
-        /* =========================
-           GENERAL
-        ========================= */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: #f8f4ef;
-            color: #4a3a30;
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-
-        /* =========================
-           NAVIGATION
-        ========================= */
-
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            padding: 18px 7%;
-
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(12px);
-
-            border-bottom: 1px solid #e7dcd2;
-
-            z-index: 1000;
-        }
-
-        .logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 36px;
-            font-weight: 600;
-            color: #634b3b;
-            letter-spacing: 3px;
-        }
-
-        .logo span {
-            font-size: 12px;
-            display: block;
-            font-family: 'Montserrat', sans-serif;
-            letter-spacing: 3px;
-            color: #a18169;
-            margin-top: -8px;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        nav ul li a {
-            color: #604d3f;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            transition: 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #b0825e;
-        }
-
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            min-height: 100vh;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            text-align: center;
-
-            padding: 140px 20px 80px;
-
-            background:
-                linear-gradient(
-                    rgba(248,244,239,0.87),
-                    rgba(248,244,239,0.92)
-                ),
-                url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1800&q=85");
-
-            background-size: cover;
-            background-position: center;
-        }
-
-        .hero-content {
-            max-width: 900px;
-        }
-
-        .hero-small {
-            font-size: 12px;
-            letter-spacing: 6px;
-            text-transform: uppercase;
-            color: #9b7658;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(80px, 15vw, 180px);
-            font-weight: 500;
-            line-height: 0.8;
-            color: #5c4435;
-            letter-spacing: -2px;
-        }
-
-        .hero h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 42px;
-            font-weight: 400;
-            color: #8b6b54;
-            margin-top: 35px;
-        }
-
-        .hero p {
-            max-width: 650px;
-            margin: 25px auto;
-
-            color: #6e6259;
-            font-size: 15px;
-            font-weight: 300;
-        }
-
-        .hero-buttons {
-            margin-top: 35px;
-        }
-
-        .btn {
-            display: inline-block;
-
-            padding: 14px 32px;
-            margin: 5px;
-
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 11px;
-
-            transition: 0.3s;
-        }
-
-        .btn-primary {
-            background: #70533f;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #9b7658;
-            transform: translateY(-3px);
-        }
-
-        .btn-outline {
-            border: 1px solid #8c6b54;
-            color: #70533f;
-        }
-
-        .btn-outline:hover {
-            background: #70533f;
-            color: white;
-        }
-
-
-        /* =========================
-           COMMON SECTION
-        ========================= */
-
-        section {
-            padding: 100px 7%;
-        }
-
-        .section-heading {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-heading span {
-            display: block;
-            color: #a27c5d;
-            font-size: 11px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-
-        .section-heading h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 58px;
-            font-weight: 500;
-            color: #594236;
-        }
-
-        .section-heading p {
-            max-width: 650px;
-            margin: 15px auto 0;
-            color: #756a62;
-            font-size: 14px;
-        }
-
-
-        /* =========================
-           ABOUT PALLAVI
-        ========================= */
-
-        .about {
-            background: #ffffff;
-        }
-
-        .about-container {
-            max-width: 1150px;
-            margin: auto;
-
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 70px;
-            align-items: center;
-        }
-
-        .about-image {
-            position: relative;
-        }
-
-        .about-image img {
-            width: 100%;
-            height: 600px;
-            object-fit: cover;
-        }
-
-        .image-label {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-
-            background: rgba(255,255,255,0.92);
-            padding: 12px 20px;
-
-            font-size: 11px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #654c3c;
-        }
-
-        .about-text h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 48px;
-            font-weight: 500;
-            color: #604738;
-            margin-bottom: 20px;
-        }
-
-        .about-text p {
-            color: #756a62;
-            font-size: 14px;
-            margin-bottom: 18px;
-        }
-
-        .about-list {
-            margin-top: 25px;
-            list-style: none;
-        }
-
-        .about-list li {
-            padding: 8px 0;
-            color: #624d3e;
-            font-size: 13px;
-            border-bottom: 1px solid #eadfd5;
-        }
-
-        .about-list li::before {
-            content: "✦";
-            margin-right: 10px;
-            color: #aa8060;
-        }
-
-        .signature {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 38px;
-            font-style: italic;
-            color: #9a7356;
-            margin-top: 25px;
-        }
-
-
-        /* =========================
-           MODELING CLASSES
-        ========================= */
-
-        .classes {
-            background: #eee5dc;
-        }
-
-        .class-grid {
-            max-width: 1150px;
-            margin: auto;
-
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .class-card {
-            background: #fff;
-            padding: 40px 30px;
-
-            border: 1px solid #e2d5ca;
-
-            transition: 0.4s;
-        }
-
-        .class-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(72,52,40,0.12);
-        }
-
-        .class-number {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 48px;
-            color: #b18a6c;
-        }
-
-        .class-card h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 31px;
-            color: #5d4536;
-            margin: 10px 0;
-        }
-
-        .class-card p {
-            color: #756a62;
-            font-size: 13px;
-        }
-
-        .class-card ul {
-            list-style: none;
-            margin-top: 20px;
-        }
-
-        .class-card ul li {
-            font-size: 12px;
-            color: #6b594c;
-            padding: 6px 0;
-        }
-
-        .class-card ul li::before {
-            content: "✓";
-            margin-right: 8px;
-            color: #9c7455;
-        }
-
-
-        /* =========================
-           FEATURED MODELS
-        ========================= */
-
-        .models {
-            background: #fff;
-        }
-
-        .model-grid {
-            max-width: 1200px;
-            margin: auto;
-
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .model-card {
-            position: relative;
-            overflow: hidden;
-            background: #eee;
-        }
-
-        .model-card img {
-            width: 100%;
-            height: 530px;
-            object-fit: cover;
-
-            transition: transform 0.7s ease;
-        }
-
-        .model-card:hover img {
-            transform: scale(1.07);
-        }
-
-        .model-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-
-            padding: 30px 25px;
-
-            color: white;
-
-            background:
-                linear-gradient(
-                    transparent,
-                    rgba(40,28,21,0.9)
-                );
-        }
-
-        .model-overlay h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 31px;
-            font-weight: 500;
-        }
-
-        .model-overlay p {
-            font-size: 10px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-
-        /* =========================
-           PALLAVI PORTFOLIO
-        ========================= */
-
-        .portfolio {
-            background: #f3ebe3;
-        }
-
-        .portfolio-grid {
-            max-width: 1200px;
-            margin: auto;
-
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-        }
-
-        .portfolio-grid img {
-            width: 100%;
-            height: 430px;
-            object-fit: cover;
-
-            transition: 0.5s;
-        }
-
-        .portfolio-grid img:hover {
-            transform: scale(1.03);
-            filter: brightness(0.9);
-        }
-
-        .portfolio-grid img:nth-child(2),
-        .portfolio-grid img:nth-child(5) {
-            margin-top: 40px;
-        }
-
-
-        /* =========================
-           TEACHING SECTION
-        ========================= */
-
-        .mentor {
-            background: #ffffff;
-        }
-
-        .mentor-container {
-            max-width: 1100px;
-            margin: auto;
-
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .mentor-text h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 50px;
-            color: #604738;
-            margin-bottom: 20px;
-        }
-
-        .mentor-text p {
-            color: #756a62;
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-
-        .mentor-image img {
-            width: 100%;
-            height: 550px;
-            object-fit: cover;
-        }
-
-        .mentor-features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-top: 25px;
-        }
-
-        .mentor-feature {
-            padding: 18px;
-            background: #f5eee8;
-        }
-
-        .mentor-feature strong {
-            display: block;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 22px;
-            color: #634b3b;
-        }
-
-        .mentor-feature small {
-            font-size: 11px;
-            color: #786b61;
-        }
-
-
-        /* =========================
-           WHY CHOOSE PALLAVI
-        ========================= */
-
-        .why {
-            background: #eadfd5;
-        }
-
-        .why-grid {
-            max-width: 1100px;
-            margin: auto;
-
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .why-card {
-            text-align: center;
-            padding: 35px 20px;
-            background: rgba(255,255,255,0.65);
-        }
-
-        .why-icon {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 42px;
-            color: #9b7355;
-        }
-
-        .why-card h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 25px;
-            color: #604738;
-            margin: 10px 0;
-        }
-
-        .why-card p {
-            font-size: 12px;
-            color: #756a62;
-        }
-
-
-        /* =========================
-           CONTACT
-        ========================= */
-
-        .contact {
-            background: #5b4436;
-            color: white;
-            text-align: center;
-        }
-
-        .contact .section-heading span {
-            color: #d5b79d;
-        }
-
-        .contact .section-heading h2 {
-            color: white;
-        }
-
-        .contact-text {
-            max-width: 650px;
-            margin: auto;
-            color: #e3d8cf;
-            font-size: 14px;
-        }
-
-        .contact-details {
-            margin-top: 35px;
-
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            flex-wrap: wrap;
-        }
-
-        .contact-item {
-            color: #f2e8df;
-            font-size: 13px;
-        }
-
-        .contact-item strong {
-            display: block;
-            color: #c9a98e;
-            text-transform: uppercase;
-            font-size: 10px;
-            letter-spacing: 2px;
-            margin-bottom: 5px;
-        }
-
-        .contact-button {
-            display: inline-block;
-            margin-top: 35px;
-
-            padding: 15px 40px;
-
-            border: 1px solid #d8bea8;
-            color: white;
-
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 11px;
-
-            transition: 0.3s;
-        }
-
-        .contact-button:hover {
-            background: white;
-            color: #5b4436;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            text-align: center;
-            padding: 28px;
-
-            background: #3e3028;
-            color: #cdbbae;
-
-            font-size: 11px;
-            letter-spacing: 1px;
-        }
-
-        footer .footer-name {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 25px;
-            color: #e1c9b4;
-            margin-bottom: 5px;
-        }
-
-
-        /* =========================
-           RESPONSIVE
-        ========================= */
-
-        @media (max-width: 950px) {
-
-            nav {
-                padding: 15px 5%;
-            }
-
-            nav ul {
-                gap: 15px;
-            }
-
-            .about-container,
-            .mentor-container {
-                grid-template-columns: 1fr;
-            }
-
-            .class-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .model-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .portfolio-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .why-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-        }
-
-
-        @media (max-width: 600px) {
-
-            nav {
-                position: relative;
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            nav ul {
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-
-            nav ul li a {
-                font-size: 9px;
-            }
-
-            .hero {
-                padding-top: 80px;
-            }
-
-            .hero h2 {
-                font-size: 30px;
-            }
-
-            section {
-                padding: 70px 5%;
-            }
-
-            .section-heading h2 {
-                font-size: 43px;
-            }
-
-            .class-grid,
-            .model-grid,
-            .portfolio-grid,
-            .why-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .model-card img {
-                height: 560px;
-            }
-
-            .portfolio-grid img {
-                height: 500px;
-                margin-top: 0 !important;
-            }
-
-            .mentor-features {
-                grid-template-columns: 1fr;
-            }
-
-            .about-image img,
-            .mentor-image img {
-                height: 500px;
-            }
-
-        }
-
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f8f4ef;
+    color: #4a3930;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+nav {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 7%;
+
+    background: rgba(255,255,255,0.96);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #e7dcd2;
+}
+
+.logo {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 38px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #634b3b;
+}
+
+.logo span {
+
+    display: block;
+
+    margin-top: -8px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #a18169;
+}
+
+nav ul {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 30px;
+}
+
+nav ul li a {
+
+    color: #604d3f;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+
+    color: #ad805d;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 140px 20px 80px;
+
+    background:
+
+        linear-gradient(
+            rgba(248,244,239,0.90),
+            rgba(248,244,239,0.94)
+        ),
+
+        url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.hero-content {
+
+    max-width: 900px;
+}
+
+.hero-small {
+
+    font-size: 12px;
+
+    letter-spacing: 6px;
+
+    text-transform: uppercase;
+
+    color: #9b7658;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(90px, 15vw, 190px);
+
+    font-weight: 500;
+
+    line-height: 0.8;
+
+    color: #5c4435;
+}
+
+.hero h2 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 42px;
+
+    font-weight: 400;
+
+    color: #8b6b54;
+
+    margin-top: 35px;
+}
+
+.hero p {
+
+    max-width: 680px;
+
+    margin: 25px auto;
+
+    color: #6e6259;
+
+    font-size: 15px;
+
+    font-weight: 300;
+}
+
+.hero-buttons {
+
+    margin-top: 35px;
+}
+
+.btn {
+
+    display: inline-block;
+
+    padding: 14px 32px;
+
+    margin: 5px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    font-size: 11px;
+
+    transition: 0.3s;
+}
+
+.btn-primary {
+
+    background: #70533f;
+
+    color: white;
+}
+
+.btn-primary:hover {
+
+    background: #9b7658;
+
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+
+    border: 1px solid #8c6b54;
+
+    color: #70533f;
+}
+
+.btn-outline:hover {
+
+    background: #70533f;
+
+    color: white;
+}
+
+
+/* =====================================================
+   COMMON SECTION
+===================================================== */
+
+section {
+
+    padding: 100px 7%;
+}
+
+.section-heading {
+
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+.section-heading span {
+
+    display: block;
+
+    color: #a27c5d;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 58px;
+
+    font-weight: 500;
+
+    color: #594236;
+}
+
+.section-heading p {
+
+    max-width: 650px;
+
+    margin: 15px auto 0;
+
+    color: #756a62;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   ABOUT PALLAVI
+===================================================== */
+
+.about {
+
+    background: #ffffff;
+}
+
+.about-container {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.about-image {
+
+    position: relative;
+}
+
+.about-image img {
+
+    height: 600px;
+
+    object-fit: cover;
+}
+
+.image-label {
+
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 20px;
+
+    background: rgba(255,255,255,0.93);
+
+    padding: 12px 20px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #654c3c;
+}
+
+.about-text h3 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 48px;
+
+    font-weight: 500;
+
+    color: #604738;
+
+    margin-bottom: 20px;
+}
+
+.about-text p {
+
+    color: #756a62;
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+}
+
+.about-list {
+
+    margin-top: 25px;
+
+    list-style: none;
+}
+
+.about-list li {
+
+    padding: 8px 0;
+
+    color: #624d3e;
+
+    font-size: 13px;
+
+    border-bottom: 1px solid #eadfd5;
+}
+
+.about-list li::before {
+
+    content: "✦";
+
+    margin-right: 10px;
+
+    color: #aa8060;
+}
+
+.signature {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 38px;
+
+    font-style: italic;
+
+    color: #9a7356;
+
+    margin-top: 25px;
+}
+
+
+/* =====================================================
+   MODELING CLASSES
+===================================================== */
+
+.classes {
+
+    background: #eee5dc;
+}
+
+.class-grid {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 25px;
+}
+
+.class-card {
+
+    background: #ffffff;
+
+    padding: 40px 30px;
+
+    border: 1px solid #e2d5ca;
+
+    transition: 0.4s;
+}
+
+.class-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 20px 40px rgba(72,52,40,0.12);
+}
+
+.class-number {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 48px;
+
+    color: #b18a6c;
+}
+
+.class-card h3 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 31px;
+
+    color: #5d4536;
+
+    margin: 10px 0;
+}
+
+.class-card p {
+
+    color: #756a62;
+
+    font-size: 13px;
+}
+
+.class-card ul {
+
+    list-style: none;
+
+    margin-top: 20px;
+}
+
+.class-card ul li {
+
+    font-size: 12px;
+
+    color: #6b594c;
+
+    padding: 6px 0;
+}
+
+.class-card ul li::before {
+
+    content: "✓";
+
+    margin-right: 8px;
+
+    color: #9c7455;
+}
+
+
+/* =====================================================
+   FEATURED MODELS
+===================================================== */
+
+.models {
+
+    background: #ffffff;
+}
+
+.model-grid {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 25px;
+}
+
+.model-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #eee;
+
+    cursor: pointer;
+}
+
+.model-card img {
+
+    width: 100%;
+
+    height: 540px;
+
+    object-fit: cover;
+
+    transition: transform 0.7s ease;
+}
+
+.model-card:hover img {
+
+    transform: scale(1.06);
+}
+
+.model-overlay {
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    right: 0;
+
+    padding: 35px 25px 25px;
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+            transparent,
+            rgba(40,28,21,0.92)
+        );
+}
+
+.model-overlay h3 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 32px;
+
+    font-weight: 500;
+}
+
+.model-overlay p {
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    opacity: 0.9;
+}
+
+
+/* =====================================================
+   MODELING MENTOR
+===================================================== */
+
+.mentor {
+
+    background: #f3ebe3;
+}
+
+.mentor-container {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.mentor-text h3 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 50px;
+
+    color: #604738;
+
+    margin-bottom: 20px;
+}
+
+.mentor-text p {
+
+    color: #756a62;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.mentor-features {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+.mentor-feature {
+
+    padding: 18px;
+
+    background: #ffffff;
+}
+
+.mentor-feature strong {
+
+    display: block;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 22px;
+
+    color: #634b3b;
+}
+
+.mentor-feature small {
+
+    font-size: 11px;
+
+    color: #786b61;
+}
+
+.mentor-image img {
+
+    height: 550px;
+
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   WHY CHOOSE PALLAVI
+===================================================== */
+
+.why {
+
+    background: #eadfd5;
+}
+
+.why-grid {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 20px;
+}
+
+.why-card {
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+    background: rgba(255,255,255,0.65);
+}
+
+.why-number {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 42px;
+
+    color: #9b7355;
+}
+
+.why-card h3 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 25px;
+
+    color: #604738;
+
+    margin: 10px 0;
+}
+
+.why-card p {
+
+    font-size: 12px;
+
+    color: #756a62;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact {
+
+    background: #5b4436;
+
+    color: white;
+
+    text-align: center;
+}
+
+.contact .section-heading span {
+
+    color: #d5b79d;
+}
+
+.contact .section-heading h2 {
+
+    color: white;
+}
+
+.contact-text {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #e3d8cf;
+
+    font-size: 14px;
+}
+
+.contact-details {
+
+    margin-top: 35px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 60px;
+
+    flex-wrap: wrap;
+}
+
+.contact-item {
+
+    color: #f2e8df;
+
+    font-size: 13px;
+}
+
+.contact-item strong {
+
+    display: block;
+
+    color: #c9a98e;
+
+    text-transform: uppercase;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+}
+
+.contact-button {
+
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 15px 40px;
+
+    border: 1px solid #d8bea8;
+
+    color: white;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    font-size: 11px;
+
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+
+    background: white;
+
+    color: #5b4436;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    text-align: center;
+
+    padding: 28px;
+
+    background: #3e3028;
+
+    color: #cdbbae;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+.footer-name {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 28px;
+
+    color: #e1c9b4;
+
+    margin-bottom: 5px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 950px) {
+
+    nav {
+
+        padding: 15px 5%;
+    }
+
+    nav ul {
+
+        gap: 15px;
+    }
+
+    .about-container,
+    .mentor-container {
+
+        grid-template-columns: 1fr;
+    }
+
+    .class-grid {
+
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .model-grid {
+
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .why-grid {
+
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    nav {
+
+        position: relative;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    nav ul {
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    nav ul li a {
+
+        font-size: 9px;
+    }
+
+    .hero {
+
+        padding-top: 80px;
+    }
+
+    .hero h2 {
+
+        font-size: 30px;
+    }
+
+    section {
+
+        padding: 70px 5%;
+    }
+
+    .section-heading h2 {
+
+        font-size: 43px;
+    }
+
+    .class-grid,
+    .model-grid,
+    .why-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .model-card img {
+
+        height: 560px;
+    }
+
+    .about-image img,
+    .mentor-image img {
+
+        height: 500px;
+    }
+
+    .mentor-features {
+
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+
 </head>
 
 
@@ -804,17 +1028,40 @@
 <nav>
 
     <div class="logo">
+
         PALLAVI
+
         <span>MODEL • MENTOR</span>
+
     </div>
 
+
     <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#classes">Classes</a></li>
-        <li><a href="#models">Models</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
+
+        <li>
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#classes">Classes</a>
+        </li>
+
+        <li>
+            <a href="#models">Models</a>
+        </li>
+
+        <li>
+            <a href="#mentor">Mentor</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+
     </ul>
 
 </nav>
@@ -830,28 +1077,49 @@
     <div class="hero-content">
 
         <div class="hero-small">
+
             Fashion • Beauty • Confidence
+
         </div>
 
-        <h1>Pallavi</h1>
 
-        <h2>Model • Mentor • Fashion Enthusiast</h2>
+        <h1>
+
+            Pallavi
+
+        </h1>
+
+
+        <h2>
+
+            Model • Modeling Teacher • Mentor
+
+        </h2>
+
 
         <p>
-            Welcome to my modeling world. I am Pallavi,
-            a professional model and modeling mentor dedicated
-            to helping aspiring models build confidence,
-            personality, runway skills and a strong fashion presence.
+
+            Welcome to my modeling world.
+            I am Pallavi, a model and modeling teacher
+            helping aspiring models develop confidence,
+            runway skills, posing, personality and professional presence.
+
         </p>
+
 
         <div class="hero-buttons">
 
-            <a href="#portfolio" class="btn btn-primary">
-                View My Portfolio
+            <a href="#models" class="btn btn-primary">
+
+                Explore Models
+
             </a>
 
+
             <a href="#classes" class="btn btn-outline">
+
                 Learn Modeling
+
             </a>
 
         </div>
@@ -870,13 +1138,15 @@
 
     <div class="section-heading">
 
-        <span>My Story</span>
+        <span>About Me</span>
 
         <h2>Meet Pallavi</h2>
 
         <p>
-            Model, educator and mentor helping aspiring models
-            discover their confidence and personal style.
+
+            Model, modeling teacher and mentor
+            passionate about helping aspiring models.
+
         </p>
 
     </div>
@@ -884,50 +1154,88 @@
 
     <div class="about-container">
 
+
         <div class="about-image">
+
+            <!-- Replace this image with your own photo -->
 
             <img
                 src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1000&q=85"
-                alt="Pallavi Fashion Model"
+                alt="Pallavi Model"
             >
 
+
             <div class="image-label">
+
                 Pallavi • Model & Mentor
+
             </div>
 
         </div>
 
 
+
         <div class="about-text">
 
-            <h3>Confidence is your best look.</h3>
+            <h3>
+
+                Confidence is your best look.
+
+            </h3>
+
 
             <p>
-                I am Pallavi, a passionate model and modeling teacher
-                who believes that modeling is not only about appearance.
-                It is about confidence, discipline, personality and
-                the ability to express yourself.
+
+                I am Pallavi, a passionate model and modeling
+                teacher. I believe that modeling is not only
+                about appearance. It is about confidence,
+                personality, discipline and self-expression.
+
             </p>
 
+
             <p>
-                Through my modeling classes, I help beginners and
-                aspiring models understand runway walking, posing,
-                expressions, grooming and professional presentation.
+
+                I teach aspiring models how to improve their
+                runway walking, posing, expressions, grooming,
+                personality and camera confidence.
+
             </p>
+
 
             <ul class="about-list">
 
-                <li>Runway Walking & Posture</li>
-                <li>Fashion Posing</li>
-                <li>Facial Expressions</li>
-                <li>Personality Development</li>
-                <li>Camera Confidence</li>
-                <li>Professional Modeling Guidance</li>
+                <li>
+                    Runway Walking
+                </li>
+
+                <li>
+                    Fashion Posing
+                </li>
+
+                <li>
+                    Facial Expressions
+                </li>
+
+                <li>
+                    Personality Development
+                </li>
+
+                <li>
+                    Camera Confidence
+                </li>
+
+                <li>
+                    Professional Modeling Guidance
+                </li>
 
             </ul>
 
+
             <div class="signature">
+
                 Pallavi
+
             </div>
 
         </div>
@@ -951,7 +1259,10 @@
         <h2>Modeling Classes</h2>
 
         <p>
-            Practical training designed for beginners and aspiring models.
+
+            Practical training for beginners
+            and aspiring models.
+
         </p>
 
     </div>
@@ -962,119 +1273,202 @@
 
         <div class="class-card">
 
-            <div class="class-number">01</div>
+            <div class="class-number">
 
-            <h3>Beginner Modeling</h3>
+                01
+
+            </div>
+
+            <h3>
+
+                Beginner Modeling
+
+            </h3>
 
             <p>
-                Start your modeling journey with the fundamentals.
+
+                Learn the fundamentals of modeling
+                and build your confidence.
+
             </p>
 
             <ul>
+
                 <li>Basic runway walking</li>
                 <li>Correct posture</li>
                 <li>Basic poses</li>
                 <li>Confidence building</li>
+
             </ul>
 
         </div>
 
 
+
         <div class="class-card">
 
-            <div class="class-number">02</div>
+            <div class="class-number">
 
-            <h3>Runway Training</h3>
+                02
+
+            </div>
+
+            <h3>
+
+                Runway Training
+
+            </h3>
 
             <p>
-                Learn how to walk and present yourself professionally.
+
+                Learn professional runway walking
+                and stage presentation.
+
             </p>
 
             <ul>
+
                 <li>Runway walk</li>
                 <li>Turns & poses</li>
                 <li>Body movement</li>
                 <li>Stage confidence</li>
+
             </ul>
 
         </div>
 
 
+
         <div class="class-card">
 
-            <div class="class-number">03</div>
+            <div class="class-number">
 
-            <h3>Fashion Posing</h3>
+                03
+
+            </div>
+
+            <h3>
+
+                Fashion Posing
+
+            </h3>
 
             <p>
-                Develop strong poses and expressions for photography.
+
+                Learn how to pose confidently
+                for fashion photography.
+
             </p>
 
             <ul>
+
                 <li>Editorial poses</li>
                 <li>Camera angles</li>
                 <li>Facial expressions</li>
                 <li>Photo confidence</li>
+
             </ul>
 
         </div>
 
 
+
         <div class="class-card">
 
-            <div class="class-number">04</div>
+            <div class="class-number">
 
-            <h3>Grooming</h3>
+                04
+
+            </div>
+
+            <h3>
+
+                Grooming
+
+            </h3>
 
             <p>
-                Learn professional grooming and personal presentation.
+
+                Learn professional personal
+                presentation and grooming.
+
             </p>
 
             <ul>
+
                 <li>Personal style</li>
                 <li>Basic makeup guidance</li>
                 <li>Hair styling awareness</li>
                 <li>Professional appearance</li>
+
             </ul>
 
         </div>
 
 
+
         <div class="class-card">
 
-            <div class="class-number">05</div>
+            <div class="class-number">
 
-            <h3>Personality</h3>
+                05
+
+            </div>
+
+            <h3>
+
+                Personality Development
+
+            </h3>
 
             <p>
-                Build confidence and develop a strong modeling personality.
+
+                Develop confidence, communication
+                and professional personality.
+
             </p>
 
             <ul>
-                <li>Communication skills</li>
+
+                <li>Communication</li>
                 <li>Confidence</li>
                 <li>Stage presence</li>
                 <li>Self-expression</li>
+
             </ul>
 
         </div>
 
 
+
         <div class="class-card">
 
-            <div class="class-number">06</div>
+            <div class="class-number">
 
-            <h3>Portfolio Guidance</h3>
+                06
+
+            </div>
+
+            <h3>
+
+                Portfolio Guidance
+
+            </h3>
 
             <p>
-                Understand how to present yourself as a professional model.
+
+                Learn how to prepare yourself
+                for professional modeling opportunities.
+
             </p>
 
             <ul>
+
                 <li>Portfolio basics</li>
                 <li>Photoshoot preparation</li>
                 <li>Model profile</li>
                 <li>Professional presentation</li>
+
             </ul>
 
         </div>
@@ -1086,7 +1480,7 @@
 
 
 <!-- =====================================================
-     FEATURED MODELS
+     ONLY FIVE REQUESTED MODELS
 ===================================================== -->
 
 <section class="models" id="models">
@@ -1098,8 +1492,10 @@
         <h2>Featured Models</h2>
 
         <p>
-            A selection of internationally recognized fashion models
-            who inspire the world of modern modeling.
+
+            Five internationally recognized models
+            who inspire the world of fashion and modeling.
+
         </p>
 
     </div>
@@ -1108,47 +1504,71 @@
     <div class="model-grid">
 
 
-        <!-- Yasmin -->
+        <!-- =================================================
+             1. YASMIN WIJNALDUM
+        ================================================== -->
 
         <div class="model-card">
 
             <img
-                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=85"
+                src="https://www.fashionmodeldirectory.com/models/yasmin_wijnaldum/showphoto/545026/"
                 alt="Yasmin Wijnaldum"
             >
 
             <div class="model-overlay">
 
-                <h3>Yasmin Wijnaldum</h3>
+                <h3>
 
-                <p>International Fashion Model</p>
+                    Yasmin Wijnaldum
+
+                </h3>
+
+                <p>
+
+                    International Fashion Model
+
+                </p>
 
             </div>
 
         </div>
 
 
-        <!-- Doutzen -->
+
+        <!-- =================================================
+             2. DOUTZEN KROES
+        ================================================== -->
 
         <div class="model-card">
 
             <img
-                src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=900&q=85"
+                src="https://iv1.lisimg.com/image/17134779/740full-doutzen-kroes.jpg"
                 alt="Doutzen Kroes"
             >
 
             <div class="model-overlay">
 
-                <h3>Doutzen Kroes</h3>
+                <h3>
 
-                <p>Fashion & Runway Model</p>
+                    Doutzen Kroes
+
+                </h3>
+
+                <p>
+
+                    Fashion & Runway Model
+
+                </p>
 
             </div>
 
         </div>
 
 
-        <!-- Bella -->
+
+        <!-- =================================================
+             3. BELLA HADID
+        ================================================== -->
 
         <div class="model-card">
 
@@ -1159,73 +1579,84 @@
 
             <div class="model-overlay">
 
-                <h3>Bella Hadid</h3>
+                <h3>
 
-                <p>High Fashion Model</p>
+                    Bella Hadid
+
+                </h3>
+
+                <p>
+
+                    High Fashion Model
+
+                </p>
 
             </div>
 
         </div>
 
 
-        <!-- Gigi -->
+
+        <!-- =================================================
+             4. GIGI HADID
+        ================================================== -->
 
         <div class="model-card">
 
             <img
-                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=85"
+                src="https://celebmafia.com/wp-content/uploads/2016/02/gigi-hadid-photo-shoot-for-vogue-magazine-china-march-2016-4.jpg"
                 alt="Gigi Hadid"
             >
 
             <div class="model-overlay">
 
-                <h3>Gigi Hadid</h3>
+                <h3>
 
-                <p>Fashion & Editorial Model</p>
+                    Gigi Hadid
+
+                </h3>
+
+                <p>
+
+                    Fashion & Editorial Model
+
+                </p>
 
             </div>
 
         </div>
 
 
-        <!-- Kendall -->
+
+        <!-- =================================================
+             5. KENDALL JENNER
+        ================================================== -->
 
         <div class="model-card">
 
             <img
-                src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=900&q=85"
+                src="https://images.squarespace-cdn.com/content/v1/55f45174e4b0fb5d95b07f39/abf24cf4-4247-4450-a3f0-493f8cd9f058/Kendall-Jenner-by-Alasdair-McLellan-W-Magazine-3-2023-00003.png?format=2500w"
                 alt="Kendall Jenner"
             >
 
             <div class="model-overlay">
 
-                <h3>Kendall Jenner</h3>
+                <h3>
 
-                <p>Runway & Fashion Model</p>
+                    Kendall Jenner
 
-            </div>
+                </h3>
 
-        </div>
+                <p>
 
+                    Runway & Fashion Model
 
-        <!-- Fashion -->
-
-        <div class="model-card">
-
-            <img
-                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85"
-                alt="Fashion Editorial"
-            >
-
-            <div class="model-overlay">
-
-                <h3>Fashion Editorial</h3>
-
-                <p>Style • Beauty • Confidence</p>
+                </p>
 
             </div>
 
         </div>
+
 
     </div>
 
@@ -1234,84 +1665,16 @@
 
 
 <!-- =====================================================
-     PALLAVI PORTFOLIO
+     MENTOR SECTION
 ===================================================== -->
 
-<section class="portfolio" id="portfolio">
-
-    <div class="section-heading">
-
-        <span>My Work</span>
-
-        <h2>Pallavi Portfolio</h2>
-
-        <p>
-            A visual collection celebrating fashion, beauty,
-            confidence and creative expression.
-        </p>
-
-    </div>
-
-
-    <div class="portfolio-grid">
-
-        <img
-            src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=900&q=85"
-            alt="Fashion Portfolio"
-        >
-
-        <img
-            src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=900&q=85"
-            alt="Fashion Style"
-        >
-
-        <img
-            src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=85"
-            alt="Fashion Model"
-        >
-
-        <img
-            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85"
-            alt="Fashion Shopping"
-        >
-
-        <img
-            src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85"
-            alt="Editorial Fashion"
-        >
-
-        <img
-            src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=900&q=85"
-            alt="Fashion Photography"
-        >
-
-        <img
-            src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=900&q=85"
-            alt="Fashion Look"
-        >
-
-        <img
-            src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=900&q=85"
-            alt="Fashion Collection"
-        >
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     TEACHING / MENTOR
-===================================================== -->
-
-<section class="mentor">
+<section class="mentor" id="mentor">
 
     <div class="section-heading">
 
         <span>My Mission</span>
 
-        <h2>Teach. Inspire. Transform.</h2>
+        <h2>Teach • Inspire • Transform</h2>
 
     </div>
 
@@ -1321,50 +1684,112 @@
 
         <div class="mentor-text">
 
-            <h3>Become the best version of yourself.</h3>
+            <h3>
+
+                Become the best version of yourself.
+
+            </h3>
+
 
             <p>
+
                 Modeling is more than walking on a runway.
                 It is about learning how to carry yourself,
-                communicate through expressions and feel confident
-                in front of people and cameras.
+                communicate through expressions and feel
+                confident in front of people and cameras.
+
             </p>
 
+
             <p>
-                My goal as a modeling teacher is to give aspiring
-                models practical guidance that helps them develop
-                their own unique style and personality.
+
+                As a modeling teacher, I help aspiring models
+                discover their confidence, improve their skills
+                and develop their own unique style.
+
             </p>
 
 
             <div class="mentor-features">
 
-                <div class="mentor-feature">
-                    <strong>Confidence</strong>
-                    <small>Build your self-confidence</small>
-                </div>
 
                 <div class="mentor-feature">
-                    <strong>Walk</strong>
-                    <small>Master runway techniques</small>
+
+                    <strong>
+
+                        Confidence
+
+                    </strong>
+
+                    <small>
+
+                        Build your self-confidence
+
+                    </small>
+
                 </div>
 
-                <div class="mentor-feature">
-                    <strong>Pose</strong>
-                    <small>Learn professional poses</small>
-                </div>
 
                 <div class="mentor-feature">
-                    <strong>Style</strong>
-                    <small>Develop your fashion identity</small>
+
+                    <strong>
+
+                        Walk
+
+                    </strong>
+
+                    <small>
+
+                        Master runway techniques
+
+                    </small>
+
                 </div>
+
+
+                <div class="mentor-feature">
+
+                    <strong>
+
+                        Pose
+
+                    </strong>
+
+                    <small>
+
+                        Learn professional poses
+
+                    </small>
+
+                </div>
+
+
+                <div class="mentor-feature">
+
+                    <strong>
+
+                        Style
+
+                    </strong>
+
+                    <small>
+
+                        Develop your fashion identity
+
+                    </small>
+
+                </div>
+
 
             </div>
 
         </div>
 
 
+
         <div class="mentor-image">
+
+            <!-- Replace with your own modeling/teaching image -->
 
             <img
                 src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=1000&q=85"
@@ -1399,54 +1824,102 @@
 
         <div class="why-card">
 
-            <div class="why-icon">01</div>
+            <div class="why-number">
 
-            <h3>Guidance</h3>
+                01
+
+            </div>
+
+            <h3>
+
+                Guidance
+
+            </h3>
 
             <p>
-                Step-by-step guidance for aspiring models.
+
+                Step-by-step guidance
+                for aspiring models.
+
             </p>
 
         </div>
+
 
 
         <div class="why-card">
 
-            <div class="why-icon">02</div>
+            <div class="why-number">
 
-            <h3>Practice</h3>
+                02
+
+            </div>
+
+            <h3>
+
+                Practice
+
+            </h3>
 
             <p>
-                Practical exercises for walking, posing and expressions.
+
+                Practical exercises for walking,
+                posing and expressions.
+
             </p>
 
         </div>
+
 
 
         <div class="why-card">
 
-            <div class="why-icon">03</div>
+            <div class="why-number">
 
-            <h3>Confidence</h3>
+                03
+
+            </div>
+
+            <h3>
+
+                Confidence
+
+            </h3>
 
             <p>
-                Develop confidence and professional stage presence.
+
+                Develop confidence and
+                professional stage presence.
+
             </p>
 
         </div>
+
 
 
         <div class="why-card">
 
-            <div class="why-icon">04</div>
+            <div class="why-number">
 
-            <h3>Growth</h3>
+                04
+
+            </div>
+
+            <h3>
+
+                Growth
+
+            </h3>
 
             <p>
-                Improve your skills and create your own modeling identity.
+
+                Improve your skills and
+                create your own modeling identity.
+
             </p>
 
         </div>
+
 
     </div>
 
@@ -1471,9 +1944,12 @@
 
     <p class="contact-text">
 
-        Are you interested in learning modeling, improving your
-        runway walk, developing your confidence or collaborating
-        on a fashion project? Connect with Pallavi.
+        Interested in learning modeling,
+        improving your runway walk,
+        developing your confidence or
+        collaborating on a fashion project?
+
+        Connect with Pallavi.
 
     </p>
 
@@ -1483,7 +1959,11 @@
 
         <div class="contact-item">
 
-            <strong>Instructor</strong>
+            <strong>
+
+                Instructor
+
+            </strong>
 
             Pallavi
 
@@ -1492,7 +1972,11 @@
 
         <div class="contact-item">
 
-            <strong>Profession</strong>
+            <strong>
+
+                Profession
+
+            </strong>
 
             Model & Modeling Mentor
 
@@ -1501,7 +1985,11 @@
 
         <div class="contact-item">
 
-            <strong>Classes</strong>
+            <strong>
+
+                Training
+
+            </strong>
 
             Modeling & Personality Development
 
@@ -1530,17 +2018,21 @@
 <footer>
 
     <div class="footer-name">
+
         PALLAVI
+
     </div>
 
     Model • Mentor • Fashion
 
     <br><br>
 
-    © 2026 Pallavi Modeling Studio. All Rights Reserved.
+    © 2026 Pallavi Modeling Studio.
+    All Rights Reserved.
 
 </footer>
 
 
 </body>
+
 </html>
