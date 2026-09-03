@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -52,7 +51,6 @@
 
         nav ul {
             list-style: none;
-
             display: flex;
             gap: 30px;
         }
@@ -60,17 +58,14 @@
         nav ul li a {
             color: white;
             text-decoration: none;
-
             font-size: 16px;
             font-weight: 500;
-
             transition: 0.3s;
         }
 
         nav ul li a:hover {
             color: #f4d19b;
         }
-
 
         /* ================= HERO ================= */
 
@@ -93,7 +88,7 @@
                 rgba(50,20,12,0.75)
             ),
 
-            url("https://images.unsplash.com/photo-1577083552431-6e5fd01988f5?auto=format&fit=crop&w=1600&q=85");
+            url("https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&fit=crop&w=1600&q=85");
 
             background-size: cover;
             background-position: center;
@@ -114,14 +109,11 @@
 
             margin-bottom: 15px;
 
-            text-shadow:
-                2px 2px 5px black;
+            text-shadow: 2px 2px 5px black;
         }
 
         .hero h2 {
-
             font-size: 30px;
-
             margin-bottom: 20px;
         }
 
@@ -169,11 +161,9 @@
             border: 2px solid #f4d19b;
         }
 
-
         /* ================= SECTIONS ================= */
 
         section {
-
             padding: 80px 8%;
         }
 
@@ -202,7 +192,6 @@
             font-size: 17px;
         }
 
-
         /* ================= ABOUT ================= */
 
         .about {
@@ -219,7 +208,6 @@
         }
 
         .about-image {
-
             width: 48%;
         }
 
@@ -238,7 +226,6 @@
         }
 
         .about-text {
-
             width: 52%;
         }
 
@@ -273,11 +260,9 @@
             color: #a84e28;
         }
 
-
         /* ================= SERVICES ================= */
 
         .services {
-
             background: #f8eee5;
         }
 
@@ -342,7 +327,6 @@
             line-height: 1.6;
         }
 
-
         /* ================= GALLERY ================= */
 
         .gallery {
@@ -387,7 +371,6 @@
         }
 
         .gallery-card:hover img {
-
             transform: scale(1.08);
         }
 
@@ -414,6 +397,70 @@
             font-weight: bold;
         }
 
+        /* ================= TULIP SECTION ================= */
+
+        .tulip-section {
+
+            background: #fff5ef;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 60px;
+
+            max-width: 1200px;
+
+            margin: auto;
+        }
+
+        .tulip-image {
+
+            width: 45%;
+        }
+
+        .tulip-image img {
+
+            width: 100%;
+
+            height: 450px;
+
+            object-fit: cover;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 15px 35px rgba(70,30,10,0.18);
+        }
+
+        .tulip-text {
+
+            width: 45%;
+        }
+
+        .tulip-text h2 {
+
+            font-family: Georgia, serif;
+
+            font-size: 40px;
+
+            color: #692c1c;
+
+            margin-bottom: 20px;
+        }
+
+        .tulip-text p {
+
+            color: #70564c;
+
+            line-height: 1.8;
+
+            font-size: 17px;
+
+            margin-bottom: 20px;
+        }
 
         /* ================= PINTEREST ================= */
 
@@ -448,11 +495,9 @@
             margin-bottom: 25px;
         }
 
-
         /* ================= WHY CHOOSE ================= */
 
         .why {
-
             background: #fffaf5;
         }
 
@@ -514,11 +559,9 @@
             line-height: 1.6;
         }
 
-
         /* ================= CONTACT ================= */
 
         .contact {
-
             background: #f8eee5;
         }
 
@@ -562,7 +605,6 @@
         }
 
         .contact-item strong {
-
             color: #692c1c;
         }
 
@@ -572,7 +614,6 @@
 
             text-decoration: none;
         }
-
 
         /* ================= FOOTER ================= */
 
@@ -603,7 +644,6 @@
             margin: 7px;
         }
 
-
         /* ================= MOBILE ================= */
 
         @media(max-width: 900px) {
@@ -625,7 +665,6 @@
             }
 
             .hero h1 {
-
                 font-size: 45px;
             }
 
@@ -652,6 +691,19 @@
                     repeat(2, 1fr);
             }
 
+            .tulip-section {
+
+                flex-direction: column;
+
+                padding: 60px 8%;
+            }
+
+            .tulip-image,
+            .tulip-text {
+
+                width: 100%;
+            }
+
             .why-container {
 
                 grid-template-columns:
@@ -659,59 +711,54 @@
             }
         }
 
-
         @media(max-width: 600px) {
 
             section {
-
                 padding: 60px 5%;
             }
 
             .hero {
-
                 min-height: 85vh;
             }
 
             .hero h1 {
-
                 font-size: 36px;
             }
 
             .hero h2 {
-
                 font-size: 22px;
             }
 
             .hero p {
-
                 font-size: 16px;
             }
 
             .section-title h2 {
-
                 font-size: 32px;
             }
 
             .service-container {
-
-                grid-template-columns:
-                    1fr;
+                grid-template-columns: 1fr;
             }
 
             .gallery {
-
-                grid-template-columns:
-                    1fr;
+                grid-template-columns: 1fr;
             }
 
             .gallery-card img {
-
                 height: 400px;
             }
 
             .about-image img {
-
                 height: 400px;
+            }
+
+            .tulip-image img {
+                height: 380px;
+            }
+
+            .tulip-text h2 {
+                font-size: 32px;
             }
         }
 
@@ -728,7 +775,7 @@
 <nav>
 
     <div class="logo">
-        Pallavi Mehndi Art
+        🌿 Pallavi Mehndi Art
     </div>
 
     <ul>
@@ -756,7 +803,6 @@
     </ul>
 
 </nav>
-
 
 
 <!-- ================= HERO ================= -->
@@ -797,7 +843,6 @@
 </section>
 
 
-
 <!-- ================= ABOUT ================= -->
 
 <section id="about">
@@ -817,10 +862,9 @@
 
     <div class="about">
 
-
         <div class="about-image">
 
-            <!-- WOMAN IMAGE -->
+            <!-- WOMAN WITH MEHNDI -->
 
             <img
                 src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&fit=crop&w=900&q=85"
@@ -872,7 +916,6 @@
 </section>
 
 
-
 <!-- ================= SERVICES ================= -->
 
 <section class="services" id="services">
@@ -904,10 +947,8 @@
             </h3>
 
             <p>
-
                 Detailed and elegant bridal
                 Mehndi designs for your wedding day.
-
             </p>
 
         </div>
@@ -924,10 +965,8 @@
             </h3>
 
             <p>
-
                 Stylish Arabic designs with
                 beautiful flowers and flowing patterns.
-
             </p>
 
         </div>
@@ -944,10 +983,8 @@
             </h3>
 
             <p>
-
                 Beautiful traditional Indian
                 patterns with intricate detailing.
-
             </p>
 
         </div>
@@ -964,10 +1001,8 @@
             </h3>
 
             <p>
-
                 Simple and attractive Mehndi
                 designs for parties and celebrations.
-
             </p>
 
         </div>
@@ -976,7 +1011,6 @@
     </div>
 
 </section>
-
 
 
 <!-- ================= GALLERY ================= -->
@@ -999,8 +1033,6 @@
     <div class="gallery">
 
 
-        <!-- DESIGN 1 -->
-
         <div class="gallery-card">
 
             <img
@@ -1013,8 +1045,6 @@
 
         </div>
 
-
-        <!-- DESIGN 2 -->
 
         <div class="gallery-card">
 
@@ -1029,8 +1059,6 @@
         </div>
 
 
-        <!-- DESIGN 3 -->
-
         <div class="gallery-card">
 
             <img
@@ -1044,13 +1072,11 @@
         </div>
 
 
-        <!-- DESIGN 4 -->
-
         <div class="gallery-card">
 
             <img
                 src="https://www.weddingchicks.com/wp-content/uploads/2022/08/PT5_4832.jpg"
-                alt="Bridal Woman Mehndi">
+                alt="Bridal Mehndi">
 
             <div class="gallery-caption">
                 Bridal Mehndi Look
@@ -1058,8 +1084,6 @@
 
         </div>
 
-
-        <!-- DESIGN 5 -->
 
         <div class="gallery-card">
 
@@ -1073,8 +1097,6 @@
 
         </div>
 
-
-        <!-- DESIGN 6 -->
 
         <div class="gallery-card">
 
@@ -1093,6 +1115,61 @@
 
 </section>
 
+
+<!-- ================= TULIP ================= -->
+
+<section>
+
+    <div class="tulip-section">
+
+        <div class="tulip-image">
+
+            <!-- TULIP IMAGE -->
+
+            <img
+                src="https://www.publicdomainpictures.net/pictures/40000/velka/tulip-flowers-close-up.jpg"
+                alt="Beautiful Tulip Flower">
+
+        </div>
+
+
+        <div class="tulip-text">
+
+            <h2>
+                🌷 Beauty Inspired by Nature
+            </h2>
+
+            <p>
+
+                Flowers are one of my favorite inspirations
+                for creating beautiful Mehndi patterns.
+
+                The delicate shape of a tulip represents
+                elegance, beauty and creativity.
+
+            </p>
+
+            <p>
+
+                I bring the beauty of flowers into
+                my Mehndi artwork through floral,
+                leafy and elegant designs.
+
+            </p>
+
+            <a
+                href="#contact"
+                class="btn">
+
+                Book Your Design
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
 
 <!-- ================= PINTEREST ================= -->
@@ -1121,7 +1198,6 @@
     </a>
 
 </section>
-
 
 
 <!-- ================= WHY CHOOSE ME ================= -->
@@ -1209,7 +1285,6 @@
 </section>
 
 
-
 <!-- ================= CONTACT ================= -->
 
 <section class="contact" id="contact">
@@ -1229,7 +1304,6 @@
 
     <div class="contact-container">
 
-
         <div class="contact-box">
 
             <h3>
@@ -1244,9 +1318,7 @@
                 </strong>
 
                 <a href="tel:+919876543210">
-
                     +91 98765 43210
-
                 </a>
 
             </div>
@@ -1259,9 +1331,7 @@
                 </strong>
 
                 <a href="mailto:pallavimehndi@gmail.com">
-
                     pallavimehndi@gmail.com
-
                 </a>
 
             </div>
@@ -1274,9 +1344,7 @@
                 </strong>
 
                 <a href="#" target="_blank">
-
                     @pallavi_mehndi_art
-
                 </a>
 
             </div>
@@ -1305,7 +1373,6 @@
 
             </a>
 
-
         </div>
 
     </div>
@@ -1313,13 +1380,12 @@
 </section>
 
 
-
 <!-- ================= FOOTER ================= -->
 
 <footer>
 
     <h3>
-        Pallavi Mehndi Art
+        🌿 Pallavi Mehndi Art
     </h3>
 
     <p>
