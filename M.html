@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Pallavi Mehndi Art</title>
+    <title>Pallavi Mehndi Art | Professional Mehndi Artist</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: "Segoe UI", Arial, sans-serif;
         }
 
         html {
@@ -20,29 +23,36 @@
 
         body {
             background: #fffaf5;
-            color: #3d1f14;
+            color: #3b1c12;
         }
 
-        /* NAVBAR */
+        /* ================= NAVBAR ================= */
+
         nav {
-            background: #4b2118;
-            padding: 18px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+
+            background: #421b13;
+
+            padding: 18px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            box-shadow: 0 3px 15px rgba(0,0,0,0.2);
         }
 
         .logo {
-            color: #f7d49a;
+            color: #f4d19b;
             font-size: 27px;
             font-weight: bold;
         }
 
         nav ul {
             list-style: none;
+
             display: flex;
             gap: 30px;
         }
@@ -50,367 +60,810 @@
         nav ul li a {
             color: white;
             text-decoration: none;
+
             font-size: 16px;
+            font-weight: 500;
+
+            transition: 0.3s;
         }
 
         nav ul li a:hover {
-            color: #f7d49a;
+            color: #f4d19b;
         }
 
-        /* HERO */
+
+        /* ================= HERO ================= */
+
         .hero {
-            min-height: 90vh;
+
+            min-height: 92vh;
+
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+
             text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(
-                rgba(75,33,24,0.75),
-                rgba(75,33,24,0.75)
+
+            padding: 50px 20px;
+
+            background-image:
+
+            linear-gradient(
+                rgba(50,20,12,0.62),
+                rgba(50,20,12,0.75)
             ),
-            url("https://images.unsplash.com/photo-1601055903647-0b5c8f2c3d4a?auto=format&fit=crop&w=1600&q=80");
+
+            url("https://images.unsplash.com/photo-1577083552431-6e5fd01988f5?auto=format&fit=crop&w=1600&q=85");
 
             background-size: cover;
             background-position: center;
         }
 
         .hero-content {
+            max-width: 850px;
             color: white;
-            max-width: 750px;
         }
 
         .hero h1 {
-            font-size: 60px;
+
+            font-family: Georgia, serif;
+
+            font-size: 65px;
+
+            color: #f5d49d;
+
             margin-bottom: 15px;
-            color: #f7d49a;
+
+            text-shadow:
+                2px 2px 5px black;
         }
 
         .hero h2 {
+
             font-size: 30px;
+
             margin-bottom: 20px;
         }
 
         .hero p {
+
             font-size: 19px;
-            line-height: 1.7;
+
+            line-height: 1.8;
+
             margin-bottom: 30px;
         }
 
         .btn {
+
             display: inline-block;
-            padding: 14px 30px;
-            background: #c46a32;
+
+            background: #c96c32;
+
             color: white;
+
             text-decoration: none;
+
+            padding: 14px 30px;
+
             border-radius: 30px;
-            font-weight: bold;
+
             margin: 8px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
         }
 
         .btn:hover {
-            background: #9e4d25;
+
+            background: #8f3f20;
+
+            transform: translateY(-3px);
         }
 
-        /* GENERAL SECTION */
+        .btn-outline {
+
+            background: transparent;
+
+            border: 2px solid #f4d19b;
+        }
+
+
+        /* ================= SECTIONS ================= */
+
         section {
-            padding: 70px 8%;
+
+            padding: 80px 8%;
         }
 
-        .title {
+        .section-title {
+
             text-align: center;
-            margin-bottom: 45px;
+
+            margin-bottom: 50px;
         }
 
-        .title h2 {
-            font-size: 38px;
-            color: #6b2e1e;
+        .section-title h2 {
+
+            font-family: Georgia, serif;
+
+            font-size: 42px;
+
+            color: #692c1c;
+
             margin-bottom: 10px;
         }
 
-        .title p {
-            color: #76584b;
+        .section-title p {
+
+            color: #80655a;
+
+            font-size: 17px;
         }
 
-        /* ABOUT */
+
+        /* ================= ABOUT ================= */
+
         .about {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            max-width: 1100px;
+
+            max-width: 1150px;
+
             margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 60px;
         }
 
-        .about-img {
-            flex: 1;
+        .about-image {
+
+            width: 48%;
         }
 
-        .about-img img {
+        .about-image img {
+
             width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+            height: 500px;
+
+            object-fit: cover;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 15px 40px rgba(60,25,10,0.2);
         }
 
         .about-text {
-            flex: 1;
+
+            width: 52%;
         }
 
         .about-text h3 {
-            font-size: 32px;
-            color: #6b2e1e;
-            margin-bottom: 15px;
+
+            font-family: Georgia, serif;
+
+            font-size: 36px;
+
+            color: #692c1c;
+
+            margin-bottom: 20px;
         }
 
         .about-text p {
-            line-height: 1.8;
-            margin-bottom: 15px;
+
+            font-size: 17px;
+
+            line-height: 1.9;
+
+            margin-bottom: 18px;
+
+            color: #604940;
         }
 
-        /* SERVICES */
+        .signature {
+
+            font-family: cursive;
+
+            font-size: 30px;
+
+            color: #a84e28;
+        }
+
+
+        /* ================= SERVICES ================= */
+
         .services {
+
             background: #f8eee5;
         }
 
         .service-container {
+
+            max-width: 1200px;
+
+            margin: auto;
+
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
             gap: 25px;
         }
 
         .service-card {
+
             background: white;
-            padding: 30px 20px;
+
+            padding: 35px 20px;
+
             text-align: center;
-            border-radius: 18px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 8px 25px rgba(70,30,10,0.1);
+
             transition: 0.3s;
         }
 
         .service-card:hover {
-            transform: translateY(-8px);
+
+            transform: translateY(-10px);
+
+            box-shadow:
+                0 15px 30px rgba(70,30,10,0.18);
         }
 
-        .service-card .icon {
+        .service-icon {
+
             font-size: 45px;
-            margin-bottom: 15px;
+
+            margin-bottom: 18px;
         }
 
         .service-card h3 {
-            color: #6b2e1e;
-            margin-bottom: 10px;
+
+            color: #692c1c;
+
+            font-size: 22px;
+
+            margin-bottom: 12px;
         }
 
         .service-card p {
-            color: #76584b;
-            line-height: 1.5;
+
+            color: #70564c;
+
+            line-height: 1.6;
         }
 
-        /* GALLERY */
+
+        /* ================= GALLERY ================= */
+
         .gallery {
+
+            max-width: 1200px;
+
+            margin: auto;
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
         }
 
-        .gallery img {
+        .gallery-card {
+
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 20px;
+
+            background: #eee;
+
+            box-shadow:
+                0 8px 25px rgba(60,25,10,0.15);
+        }
+
+        .gallery-card img {
+
             width: 100%;
-            height: 300px;
+
+            height: 360px;
+
             object-fit: cover;
-            border-radius: 15px;
-            transition: 0.3s;
+
+            display: block;
+
+            transition: 0.5s;
         }
 
-        .gallery img:hover {
-            transform: scale(1.04);
+        .gallery-card:hover img {
+
+            transform: scale(1.08);
         }
 
-        /* WHY US */
-        .why {
-            background: #4b2118;
+        .gallery-caption {
+
+            position: absolute;
+
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            padding: 20px;
+
+            background:
+                linear-gradient(
+                    transparent,
+                    rgba(40,15,8,0.9)
+                );
+
             color: white;
-            text-align: center;
+
+            font-size: 19px;
+
+            font-weight: bold;
         }
 
-        .why .title h2 {
-            color: #f7d49a;
+
+        /* ================= PINTEREST ================= */
+
+        .pinterest-section {
+
+            background: #4b2017;
+
+            text-align: center;
+
+            color: white;
+        }
+
+        .pinterest-section h2 {
+
+            font-family: Georgia, serif;
+
+            color: #f4d19b;
+
+            font-size: 40px;
+
+            margin-bottom: 15px;
+        }
+
+        .pinterest-section p {
+
+            max-width: 700px;
+
+            margin: auto;
+
+            line-height: 1.7;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* ================= WHY CHOOSE ================= */
+
+        .why {
+
+            background: #fffaf5;
         }
 
         .why-container {
+
+            max-width: 1100px;
+
+            margin: auto;
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 30px;
         }
 
         .why-card {
-            padding: 25px;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+        .why-number {
+
+            width: 65px;
+            height: 65px;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #f2dcc4;
+
+            color: #692c1c;
+
+            font-size: 25px;
+
+            font-weight: bold;
         }
 
         .why-card h3 {
-            color: #f7d49a;
-            margin: 15px 0;
+
+            color: #692c1c;
+
+            margin: 18px 0 10px;
         }
 
-        /* CONTACT */
+        .why-card p {
+
+            color: #70564c;
+
+            line-height: 1.6;
+        }
+
+
+        /* ================= CONTACT ================= */
+
         .contact {
+
+            background: #f8eee5;
+        }
+
+        .contact-container {
+
             max-width: 900px;
+
             margin: auto;
+
             text-align: center;
         }
 
         .contact-box {
-            background: #f8eee5;
-            padding: 35px;
-            border-radius: 20px;
-            line-height: 2;
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 10px 30px rgba(60,25,10,0.1);
         }
 
         .contact-box h3 {
-            color: #6b2e1e;
-            font-size: 28px;
+
+            font-family: Georgia, serif;
+
+            font-size: 32px;
+
+            color: #692c1c;
+
+            margin-bottom: 20px;
         }
 
-        .contact-box a {
-            color: #a64f29;
+        .contact-item {
+
+            margin: 15px 0;
+
+            font-size: 18px;
+        }
+
+        .contact-item strong {
+
+            color: #692c1c;
+        }
+
+        .contact-item a {
+
+            color: #a84e28;
+
             text-decoration: none;
-            font-weight: bold;
         }
 
-        /* FOOTER */
+
+        /* ================= FOOTER ================= */
+
         footer {
-            background: #30130e;
+
+            background: #2d120d;
+
             color: white;
+
             text-align: center;
-            padding: 25px;
+
+            padding: 30px 20px;
         }
 
-        footer span {
-            color: #f7d49a;
+        footer h3 {
+
+            color: #f4d19b;
+
+            font-family: Georgia, serif;
+
+            margin-bottom: 10px;
         }
 
-        /* MOBILE */
-        @media(max-width: 800px) {
+        footer p {
+
+            color: #dbc4b8;
+
+            margin: 7px;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width: 900px) {
 
             nav {
+
                 flex-direction: column;
+
                 gap: 15px;
             }
 
             nav ul {
-                gap: 15px;
+
                 flex-wrap: wrap;
+
                 justify-content: center;
+
+                gap: 15px;
             }
 
             .hero h1 {
-                font-size: 42px;
-            }
 
-            .hero h2 {
-                font-size: 24px;
+                font-size: 45px;
             }
 
             .about {
+
                 flex-direction: column;
             }
 
+            .about-image,
+            .about-text {
+
+                width: 100%;
+            }
+
             .service-container {
-                grid-template-columns: 1fr 1fr;
+
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
             .gallery {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
             .why-container {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
             }
         }
 
-        @media(max-width: 500px) {
-            .service-container {
-                grid-template-columns: 1fr;
+
+        @media(max-width: 600px) {
+
+            section {
+
+                padding: 60px 5%;
+            }
+
+            .hero {
+
+                min-height: 85vh;
             }
 
             .hero h1 {
-                font-size: 35px;
+
+                font-size: 36px;
+            }
+
+            .hero h2 {
+
+                font-size: 22px;
+            }
+
+            .hero p {
+
+                font-size: 16px;
+            }
+
+            .section-title h2 {
+
+                font-size: 32px;
+            }
+
+            .service-container {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .gallery {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .gallery-card img {
+
+                height: 400px;
+            }
+
+            .about-image img {
+
+                height: 400px;
             }
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- ================= NAVBAR ================= -->
+
 <nav>
-    <div class="logo">Pallavi Mehndi Art</div>
+
+    <div class="logo">
+        Pallavi Mehndi Art
+    </div>
 
     <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
+
+        <li>
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#services">Services</a>
+        </li>
+
+        <li>
+            <a href="#gallery">Gallery</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+
     </ul>
+
 </nav>
 
 
-<!-- HERO -->
+
+<!-- ================= HERO ================= -->
+
 <section class="hero" id="home">
 
     <div class="hero-content">
 
-        <h1>✨ Pallavi Mehndi Art ✨</h1>
+        <h1>
+            Pallavi Mehndi Art
+        </h1>
 
-        <h2>Beautiful Designs • Beautiful Memories</h2>
+        <h2>
+            Elegant Mehndi • Beautiful Memories
+        </h2>
 
         <p>
-            Welcome to Pallavi Mehndi Art!
-            I am Pallavi, a passionate Mehndi artist creating
-            beautiful and unique Mehndi designs for every special occasion.
+
+            Welcome to Pallavi Mehndi Art.
+
+            I am Pallavi, a passionate Mehndi artist
+            creating beautiful, creative and elegant
+            Mehndi designs for weddings, festivals
+            and special occasions.
+
         </p>
 
-        <a href="#gallery" class="btn">View My Designs</a>
+        <a href="#gallery" class="btn">
+            Explore Designs
+        </a>
 
-        <a href="#contact" class="btn">Book Appointment</a>
+        <a href="#contact" class="btn btn-outline">
+            Book Appointment
+        </a>
 
     </div>
 
 </section>
 
 
-<!-- ABOUT -->
+
+<!-- ================= ABOUT ================= -->
+
 <section id="about">
 
-    <div class="title">
-        <h2>About Me</h2>
-        <p>Meet the artist behind the beautiful designs</p>
+    <div class="section-title">
+
+        <h2>
+            About Pallavi
+        </h2>
+
+        <p>
+            The artist behind your beautiful Mehndi
+        </p>
+
     </div>
+
 
     <div class="about">
 
-        <div class="about-img">
-            <img src="https://images.unsplash.com/photo-1610652492500-ded49ceeb378?auto=format&fit=crop&w=800&q=80"
-                 alt="Mehndi Art">
+
+        <div class="about-image">
+
+            <!-- WOMAN IMAGE -->
+
+            <img
+                src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&fit=crop&w=900&q=85"
+                alt="Woman with beautiful Mehndi">
+
         </div>
+
 
         <div class="about-text">
 
-            <h3>Hello, I'm Pallavi 👋</h3>
+            <h3>
+                Hello, I'm Pallavi
+            </h3>
 
             <p>
-                I am a passionate Mehndi artist who loves creating
-                elegant and creative Mehndi designs.
+
+                I am a passionate Mehndi artist
+                specializing in traditional and
+                contemporary Mehndi designs.
+
             </p>
 
             <p>
-                My goal is to make every bride and customer feel
-                special with beautiful, detailed and artistic Mehndi.
+
+                I love transforming hands into
+                beautiful works of art using
+                detailed floral, Arabic, bridal
+                and traditional patterns.
+
             </p>
 
             <p>
-                I create traditional, bridal, Arabic, floral and
-                modern Mehndi designs according to your choice.
+
+                Every design is created with
+                creativity, patience and attention
+                to detail to make your special
+                moments unforgettable.
+
             </p>
+
+            <div class="signature">
+                — Pallavi ❤️
+            </div>
 
         </div>
 
@@ -419,156 +872,439 @@
 </section>
 
 
-<!-- SERVICES -->
+
+<!-- ================= SERVICES ================= -->
+
 <section class="services" id="services">
 
-    <div class="title">
-        <h2>My Services</h2>
-        <p>Mehndi designs for every special occasion</p>
+    <div class="section-title">
+
+        <h2>
+            My Services
+        </h2>
+
+        <p>
+            Beautiful Mehndi for every occasion
+        </p>
+
     </div>
+
 
     <div class="service-container">
 
-        <div class="service-card">
-            <div class="icon">💍</div>
-            <h3>Bridal Mehndi</h3>
-            <p>Beautiful and detailed bridal Mehndi designs.</p>
-        </div>
 
         <div class="service-card">
-            <div class="icon">🌸</div>
-            <h3>Arabic Mehndi</h3>
-            <p>Stylish and elegant Arabic Mehndi patterns.</p>
+
+            <div class="service-icon">
+                💍
+            </div>
+
+            <h3>
+                Bridal Mehndi
+            </h3>
+
+            <p>
+
+                Detailed and elegant bridal
+                Mehndi designs for your wedding day.
+
+            </p>
+
         </div>
 
-        <div class="service-card">
-            <div class="icon">🌿</div>
-            <h3>Traditional Mehndi</h3>
-            <p>Classic traditional designs with beautiful details.</p>
-        </div>
 
         <div class="service-card">
-            <div class="icon">✨</div>
-            <h3>Party Mehndi</h3>
-            <p>Simple and attractive designs for parties and events.</p>
+
+            <div class="service-icon">
+                🌸
+            </div>
+
+            <h3>
+                Arabic Mehndi
+            </h3>
+
+            <p>
+
+                Stylish Arabic designs with
+                beautiful flowers and flowing patterns.
+
+            </p>
+
         </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🌿
+            </div>
+
+            <h3>
+                Traditional Mehndi
+            </h3>
+
+            <p>
+
+                Beautiful traditional Indian
+                patterns with intricate detailing.
+
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                ✨
+            </div>
+
+            <h3>
+                Party Mehndi
+            </h3>
+
+            <p>
+
+                Simple and attractive Mehndi
+                designs for parties and celebrations.
+
+            </p>
+
+        </div>
+
 
     </div>
 
 </section>
 
 
-<!-- GALLERY -->
+
+<!-- ================= GALLERY ================= -->
+
 <section id="gallery">
 
-    <div class="title">
-        <h2>My Mehndi Designs</h2>
-        <p>A collection of my favorite work</p>
+    <div class="section-title">
+
+        <h2>
+            Mehndi Design Gallery
+        </h2>
+
+        <p>
+            Inspiration for your next Mehndi design
+        </p>
+
     </div>
+
 
     <div class="gallery">
 
-        <img src="https://images.unsplash.com/photo-1599929551168-1f0a0e3a8f9b?auto=format&fit=crop&w=700&q=80"
-             alt="Mehndi Design">
 
-        <img src="https://images.unsplash.com/photo-1601055903647-0b5c8f2c3d4a?auto=format&fit=crop&w=700&q=80"
-             alt="Bridal Mehndi">
+        <!-- DESIGN 1 -->
 
-        <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&fit=crop&w=700&q=80"
-             alt="Arabic Mehndi">
+        <div class="gallery-card">
 
-        <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=700&q=80"
-             alt="Mehndi Art">
+            <img
+                src="https://i.pinimg.com/originals/1e/be/11/1ebe11214af8c40aff7604d036407188.jpg"
+                alt="Bridal Mehndi Design">
 
-        <img src="https://images.unsplash.com/photo-1599305090598-fe179d501227?auto=format&fit=crop&w=700&q=80"
-             alt="Henna Design">
+            <div class="gallery-caption">
+                Bridal Mehndi
+            </div>
 
-        <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01988f5?auto=format&fit=crop&w=700&q=80"
-             alt="Beautiful Mehndi">
+        </div>
+
+
+        <!-- DESIGN 2 -->
+
+        <div class="gallery-card">
+
+            <img
+                src="https://www.designsmehndi.in/cdn/shop/files/front-hand-simple-mehndi-design.jpg"
+                alt="Front Hand Mehndi Design">
+
+            <div class="gallery-caption">
+                Front Hand Design
+            </div>
+
+        </div>
+
+
+        <!-- DESIGN 3 -->
+
+        <div class="gallery-card">
+
+            <img
+                src="https://mehndidesign.beauty/images/dark-stain-traditional-bridal-mehndi-35.jpeg"
+                alt="Traditional Bridal Mehndi">
+
+            <div class="gallery-caption">
+                Traditional Bridal
+            </div>
+
+        </div>
+
+
+        <!-- DESIGN 4 -->
+
+        <div class="gallery-card">
+
+            <img
+                src="https://www.weddingchicks.com/wp-content/uploads/2022/08/PT5_4832.jpg"
+                alt="Bridal Woman Mehndi">
+
+            <div class="gallery-caption">
+                Bridal Mehndi Look
+            </div>
+
+        </div>
+
+
+        <!-- DESIGN 5 -->
+
+        <div class="gallery-card">
+
+            <img
+                src="https://images.zola.com/51f26607-951b-451f-8e4f-195328d94c6e"
+                alt="Bridal Henna Design">
+
+            <div class="gallery-caption">
+                Elegant Henna
+            </div>
+
+        </div>
+
+
+        <!-- DESIGN 6 -->
+
+        <div class="gallery-card">
+
+            <img
+                src="https://i.pinimg.com/736x/d5/a8/b5/d5a8b582f366f4cdd584f1be8e3a1ef6.jpg"
+                alt="Indian Bridal Mehndi">
+
+            <div class="gallery-caption">
+                Indian Bridal Design
+            </div>
+
+        </div>
+
 
     </div>
 
 </section>
 
 
-<!-- WHY CHOOSE ME -->
+
+<!-- ================= PINTEREST ================= -->
+
+<section class="pinterest-section">
+
+    <h2>
+        More Mehndi Inspiration
+    </h2>
+
+    <p>
+
+        Explore more beautiful Mehndi designs
+        and get inspiration for your next
+        Mehndi appointment.
+
+    </p>
+
+    <a
+        href="https://www.pinterest.com/adhennacentre/designs-from-the-web/"
+        target="_blank"
+        class="btn">
+
+        View Pinterest Designs
+
+    </a>
+
+</section>
+
+
+
+<!-- ================= WHY CHOOSE ME ================= -->
+
 <section class="why">
 
-    <div class="title">
-        <h2>Why Choose Pallavi?</h2>
-        <p>Making your special moments more beautiful</p>
+    <div class="section-title">
+
+        <h2>
+            Why Choose Pallavi?
+        </h2>
+
+        <p>
+            Creativity, beauty and personal attention
+        </p>
+
     </div>
+
 
     <div class="why-container">
 
-        <div class="why-card">
-            <h3>🎨 Creative Designs</h3>
-            <p>
-                Unique and creative designs made according
-                to your preference.
-            </p>
-        </div>
 
         <div class="why-card">
-            <h3>❤️ Passionate Artist</h3>
+
+            <div class="why-number">
+                01
+            </div>
+
+            <h3>
+                Creative Designs
+            </h3>
+
             <p>
-                Every design is created with love,
-                patience and attention to detail.
+
+                Unique designs created according
+                to your style and preference.
+
             </p>
+
         </div>
 
+
         <div class="why-card">
-            <h3>✨ Special Occasions</h3>
+
+            <div class="why-number">
+                02
+            </div>
+
+            <h3>
+                Fine Detailing
+            </h3>
+
             <p>
-                Perfect Mehndi for weddings, festivals,
-                parties and celebrations.
+
+                Intricate patterns and beautiful
+                finishing for an elegant look.
+
             </p>
+
         </div>
+
+
+        <div class="why-card">
+
+            <div class="why-number">
+                03
+            </div>
+
+            <h3>
+                Special Attention
+            </h3>
+
+            <p>
+
+                Every customer receives personal
+                attention and customized designs.
+
+            </p>
+
+        </div>
+
 
     </div>
 
 </section>
 
 
-<!-- CONTACT -->
-<section id="contact">
 
-    <div class="title">
-        <h2>Book Your Mehndi</h2>
-        <p>Let's create something beautiful together!</p>
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+    <div class="section-title">
+
+        <h2>
+            Book Your Mehndi
+        </h2>
+
+        <p>
+            Let's make your special occasion beautiful
+        </p>
+
     </div>
 
-    <div class="contact">
+
+    <div class="contact-container">
+
 
         <div class="contact-box">
 
-            <h3>Pallavi Mehndi Art</h3>
+            <h3>
+                Pallavi Mehndi Art
+            </h3>
 
-            <p>📞 Phone: <a href="tel:+919876543210">
-                +91 98765 43210
-            </a></p>
 
-            <p>📧 Email:
+            <div class="contact-item">
+
+                <strong>
+                    📞 Phone:
+                </strong>
+
+                <a href="tel:+919876543210">
+
+                    +91 98765 43210
+
+                </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>
+                    📧 Email:
+                </strong>
+
                 <a href="mailto:pallavimehndi@gmail.com">
+
                     pallavimehndi@gmail.com
-                </a>
-            </p>
 
-            <p>📸 Instagram:
-                <a href="#">
+                </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>
+                    📸 Instagram:
+                </strong>
+
+                <a href="#" target="_blank">
+
                     @pallavi_mehndi_art
-                </a>
-            </p>
 
-            <p>📍 Location: Your City, Maharashtra</p>
+                </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>
+                    📍 Location:
+                </strong>
+
+                Your City, Maharashtra
+
+            </div>
+
 
             <br>
 
-            <a href="https://wa.me/919876543210"
-               class="btn"
-               target="_blank">
+
+            <a
+                href="https://wa.me/919876543210"
+                target="_blank"
+                class="btn">
+
                 💬 Book on WhatsApp
+
             </a>
+
 
         </div>
 
@@ -577,19 +1313,26 @@
 </section>
 
 
-<!-- FOOTER -->
+
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
+    <h3>
+        Pallavi Mehndi Art
+    </h3>
+
     <p>
-        © 2026 <span>Pallavi Mehndi Art</span>.
-        All Rights Reserved.
+        Beautiful Mehndi • Beautiful Memories
     </p>
 
     <p>
-        Designed with ❤️ by Pallavi
+        © 2026 Pallavi Mehndi Art. All Rights Reserved.
     </p>
 
 </footer>
 
+
 </body>
+
 </html>
