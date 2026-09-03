@@ -50,11 +50,10 @@ img {
 
 
 /* =====================================================
-   NAVIGATION
+   NAVBAR
 ===================================================== */
 
 nav {
-
     position: fixed;
     top: 0;
     left: 0;
@@ -73,11 +72,10 @@ nav {
 
     backdrop-filter: blur(12px);
 
-    border-bottom: 1px solid #e7dcd2;
+    border-bottom: 1px solid #e6d9ce;
 }
 
 .logo {
-
     font-family: 'Cormorant Garamond', serif;
 
     font-size: 38px;
@@ -86,11 +84,10 @@ nav {
 
     letter-spacing: 3px;
 
-    color: #634b3b;
+    color: #604738;
 }
 
 .logo span {
-
     display: block;
 
     margin-top: -8px;
@@ -101,11 +98,10 @@ nav {
 
     letter-spacing: 3px;
 
-    color: #a18169;
+    color: #a17b5d;
 }
 
 nav ul {
-
     display: flex;
 
     list-style: none;
@@ -114,7 +110,6 @@ nav ul {
 }
 
 nav ul li a {
-
     color: #604d3f;
 
     font-size: 11px;
@@ -127,8 +122,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-
-    color: #ad805d;
+    color: #b0825e;
 }
 
 
@@ -154,7 +148,7 @@ nav ul li a:hover {
 
         linear-gradient(
             rgba(248,244,239,0.90),
-            rgba(248,244,239,0.94)
+            rgba(248,244,239,0.95)
         ),
 
         url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1800&q=85");
@@ -165,7 +159,6 @@ nav ul li a:hover {
 }
 
 .hero-content {
-
     max-width: 900px;
 }
 
@@ -222,7 +215,6 @@ nav ul li a:hover {
 }
 
 .hero-buttons {
-
     margin-top: 35px;
 }
 
@@ -277,7 +269,6 @@ nav ul li a:hover {
 ===================================================== */
 
 section {
-
     padding: 100px 7%;
 }
 
@@ -540,7 +531,7 @@ section {
 
 
 /* =====================================================
-   FEATURED MODELS
+   ONLY 5 FEATURED MODELS
 ===================================================== */
 
 .models {
@@ -550,13 +541,13 @@ section {
 
 .model-grid {
 
-    max-width: 1200px;
+    max-width: 1250px;
 
     margin: auto;
 
     display: grid;
 
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 25px;
 }
@@ -570,15 +561,19 @@ section {
     background: #eee;
 
     cursor: pointer;
+
+    border-radius: 2px;
 }
 
 .model-card img {
 
     width: 100%;
 
-    height: 540px;
+    height: 560px;
 
     object-fit: cover;
+
+    object-position: center;
 
     transition: transform 0.7s ease;
 }
@@ -598,7 +593,7 @@ section {
 
     right: 0;
 
-    padding: 35px 25px 25px;
+    padding: 45px 25px 25px;
 
     color: white;
 
@@ -606,7 +601,7 @@ section {
 
         linear-gradient(
             transparent,
-            rgba(40,28,21,0.92)
+            rgba(35,25,19,0.94)
         );
 }
 
@@ -914,33 +909,27 @@ footer {
 @media (max-width: 950px) {
 
     nav {
-
         padding: 15px 5%;
     }
 
     nav ul {
-
         gap: 15px;
     }
 
     .about-container,
     .mentor-container {
-
         grid-template-columns: 1fr;
     }
 
     .class-grid {
-
         grid-template-columns: repeat(2,1fr);
     }
 
     .model-grid {
-
         grid-template-columns: repeat(2,1fr);
     }
 
     .why-grid {
-
         grid-template-columns: repeat(2,1fr);
     }
 }
@@ -1011,6 +1000,7 @@ footer {
 
         grid-template-columns: 1fr;
     }
+
 }
 
 </style>
@@ -1111,7 +1101,7 @@ footer {
 
             <a href="#models" class="btn btn-primary">
 
-                Explore Models
+                Meet The Models
 
             </a>
 
@@ -1157,7 +1147,7 @@ footer {
 
         <div class="about-image">
 
-            <!-- Replace this image with your own photo -->
+            <!-- Replace with your own professional photo -->
 
             <img
                 src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1000&q=85"
@@ -1186,19 +1176,27 @@ footer {
 
             <p>
 
-                I am Pallavi, a passionate model and modeling
-                teacher. I believe that modeling is not only
-                about appearance. It is about confidence,
-                personality, discipline and self-expression.
+                I am Pallavi, a passionate model and
+                modeling teacher. I believe modeling
+                is not only about appearance.
 
             </p>
 
 
             <p>
 
-                I teach aspiring models how to improve their
-                runway walking, posing, expressions, grooming,
-                personality and camera confidence.
+                Modeling is about confidence,
+                personality, discipline, presentation
+                and self-expression.
+
+            </p>
+
+
+            <p>
+
+                I teach aspiring models how to improve
+                their runway walking, posing, expressions,
+                grooming, personality and camera confidence.
 
             </p>
 
@@ -1273,32 +1271,22 @@ footer {
 
         <div class="class-card">
 
-            <div class="class-number">
-
-                01
-
-            </div>
+            <div class="class-number">01</div>
 
             <h3>
-
                 Beginner Modeling
-
             </h3>
 
             <p>
-
                 Learn the fundamentals of modeling
                 and build your confidence.
-
             </p>
 
             <ul>
-
                 <li>Basic runway walking</li>
                 <li>Correct posture</li>
                 <li>Basic poses</li>
                 <li>Confidence building</li>
-
             </ul>
 
         </div>
@@ -1307,32 +1295,22 @@ footer {
 
         <div class="class-card">
 
-            <div class="class-number">
-
-                02
-
-            </div>
+            <div class="class-number">02</div>
 
             <h3>
-
                 Runway Training
-
             </h3>
 
             <p>
-
                 Learn professional runway walking
                 and stage presentation.
-
             </p>
 
             <ul>
-
                 <li>Runway walk</li>
                 <li>Turns & poses</li>
                 <li>Body movement</li>
                 <li>Stage confidence</li>
-
             </ul>
 
         </div>
@@ -1341,32 +1319,22 @@ footer {
 
         <div class="class-card">
 
-            <div class="class-number">
-
-                03
-
-            </div>
+            <div class="class-number">03</div>
 
             <h3>
-
                 Fashion Posing
-
             </h3>
 
             <p>
-
                 Learn how to pose confidently
                 for fashion photography.
-
             </p>
 
             <ul>
-
                 <li>Editorial poses</li>
                 <li>Camera angles</li>
                 <li>Facial expressions</li>
                 <li>Photo confidence</li>
-
             </ul>
 
         </div>
@@ -1375,32 +1343,22 @@ footer {
 
         <div class="class-card">
 
-            <div class="class-number">
-
-                04
-
-            </div>
+            <div class="class-number">04</div>
 
             <h3>
-
                 Grooming
-
             </h3>
 
             <p>
-
                 Learn professional personal
                 presentation and grooming.
-
             </p>
 
             <ul>
-
                 <li>Personal style</li>
-                <li>Basic makeup guidance</li>
+                <li>Makeup guidance</li>
                 <li>Hair styling awareness</li>
                 <li>Professional appearance</li>
-
             </ul>
 
         </div>
@@ -1409,32 +1367,22 @@ footer {
 
         <div class="class-card">
 
-            <div class="class-number">
-
-                05
-
-            </div>
+            <div class="class-number">05</div>
 
             <h3>
-
                 Personality Development
-
             </h3>
 
             <p>
-
                 Develop confidence, communication
                 and professional personality.
-
             </p>
 
             <ul>
-
                 <li>Communication</li>
                 <li>Confidence</li>
                 <li>Stage presence</li>
                 <li>Self-expression</li>
-
             </ul>
 
         </div>
@@ -1443,32 +1391,22 @@ footer {
 
         <div class="class-card">
 
-            <div class="class-number">
-
-                06
-
-            </div>
+            <div class="class-number">06</div>
 
             <h3>
-
                 Portfolio Guidance
-
             </h3>
 
             <p>
-
                 Learn how to prepare yourself
-                for professional modeling opportunities.
-
+                for modeling opportunities.
             </p>
 
             <ul>
-
                 <li>Portfolio basics</li>
                 <li>Photoshoot preparation</li>
                 <li>Model profile</li>
                 <li>Professional presentation</li>
-
             </ul>
 
         </div>
@@ -1480,7 +1418,7 @@ footer {
 
 
 <!-- =====================================================
-     ONLY FIVE REQUESTED MODELS
+     ONLY REQUESTED FIVE MODELS
 ===================================================== -->
 
 <section class="models" id="models">
@@ -1494,7 +1432,7 @@ footer {
         <p>
 
             Five internationally recognized models
-            who inspire the world of fashion and modeling.
+            who inspire modern fashion and modeling.
 
         </p>
 
@@ -1511,22 +1449,19 @@ footer {
         <div class="model-card">
 
             <img
-                src="https://www.fashionmodeldirectory.com/models/yasmin_wijnaldum/showphoto/545026/"
+                src="https://wallpapercave.com/wp/wp8199060.jpg"
                 alt="Yasmin Wijnaldum"
+                onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=85';"
             >
 
             <div class="model-overlay">
 
                 <h3>
-
                     Yasmin Wijnaldum
-
                 </h3>
 
                 <p>
-
                     International Fashion Model
-
                 </p>
 
             </div>
@@ -1542,22 +1477,18 @@ footer {
         <div class="model-card">
 
             <img
-                src="https://iv1.lisimg.com/image/17134779/740full-doutzen-kroes.jpg"
+                src="https://www.designscene.net/wp-content/uploads/2015/01/Doutzen-Kroes-Glamour-Netherlands-Paul-Bellaart-06-620x750.jpg"
                 alt="Doutzen Kroes"
             >
 
             <div class="model-overlay">
 
                 <h3>
-
                     Doutzen Kroes
-
                 </h3>
 
                 <p>
-
                     Fashion & Runway Model
-
                 </p>
 
             </div>
@@ -1573,22 +1504,18 @@ footer {
         <div class="model-card">
 
             <img
-                src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85"
+                src="https://assets.vogue.com/photos/622b6938f1c0bf717ac69d00/master/pass/VO0422_SocialCover_Logo.jpg"
                 alt="Bella Hadid"
             >
 
             <div class="model-overlay">
 
                 <h3>
-
                     Bella Hadid
-
                 </h3>
 
                 <p>
-
                     High Fashion Model
-
                 </p>
 
             </div>
@@ -1611,15 +1538,11 @@ footer {
             <div class="model-overlay">
 
                 <h3>
-
                     Gigi Hadid
-
                 </h3>
 
                 <p>
-
                     Fashion & Editorial Model
-
                 </p>
 
             </div>
@@ -1635,22 +1558,18 @@ footer {
         <div class="model-card">
 
             <img
-                src="https://images.squarespace-cdn.com/content/v1/55f45174e4b0fb5d95b07f39/abf24cf4-4247-4450-a3f0-493f8cd9f058/Kendall-Jenner-by-Alasdair-McLellan-W-Magazine-3-2023-00003.png?format=2500w"
+                src="https://assets.vogue.com/photos/587713b64188c65056657e20/master/w_1024%2Cc_limit/kendall-jenner-2016-september-cover-vogue-12.jpg"
                 alt="Kendall Jenner"
             >
 
             <div class="model-overlay">
 
                 <h3>
-
                     Kendall Jenner
-
                 </h3>
 
                 <p>
-
                     Runway & Fashion Model
-
                 </p>
 
             </div>
@@ -1685,9 +1604,7 @@ footer {
         <div class="mentor-text">
 
             <h3>
-
                 Become the best version of yourself.
-
             </h3>
 
 
@@ -1703,9 +1620,9 @@ footer {
 
             <p>
 
-                As a modeling teacher, I help aspiring models
-                discover their confidence, improve their skills
-                and develop their own unique style.
+                As a modeling teacher, I help aspiring
+                models discover their confidence, improve
+                their skills and develop their own unique style.
 
             </p>
 
@@ -1716,15 +1633,11 @@ footer {
                 <div class="mentor-feature">
 
                     <strong>
-
                         Confidence
-
                     </strong>
 
                     <small>
-
                         Build your self-confidence
-
                     </small>
 
                 </div>
@@ -1733,15 +1646,11 @@ footer {
                 <div class="mentor-feature">
 
                     <strong>
-
                         Walk
-
                     </strong>
 
                     <small>
-
                         Master runway techniques
-
                     </small>
 
                 </div>
@@ -1750,15 +1659,11 @@ footer {
                 <div class="mentor-feature">
 
                     <strong>
-
                         Pose
-
                     </strong>
 
                     <small>
-
                         Learn professional poses
-
                     </small>
 
                 </div>
@@ -1767,15 +1672,11 @@ footer {
                 <div class="mentor-feature">
 
                     <strong>
-
                         Style
-
                     </strong>
 
                     <small>
-
                         Develop your fashion identity
-
                     </small>
 
                 </div>
@@ -1789,7 +1690,7 @@ footer {
 
         <div class="mentor-image">
 
-            <!-- Replace with your own modeling/teaching image -->
+            <!-- Replace this with your own teaching/modeling photo -->
 
             <img
                 src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=1000&q=85"
@@ -1805,7 +1706,7 @@ footer {
 
 
 <!-- =====================================================
-     WHY CHOOSE PALLAVI
+     WHY LEARN WITH PALLAVI
 ===================================================== -->
 
 <section class="why">
@@ -1825,22 +1726,16 @@ footer {
         <div class="why-card">
 
             <div class="why-number">
-
                 01
-
             </div>
 
             <h3>
-
                 Guidance
-
             </h3>
 
             <p>
-
                 Step-by-step guidance
                 for aspiring models.
-
             </p>
 
         </div>
@@ -1850,22 +1745,16 @@ footer {
         <div class="why-card">
 
             <div class="why-number">
-
                 02
-
             </div>
 
             <h3>
-
                 Practice
-
             </h3>
 
             <p>
-
                 Practical exercises for walking,
                 posing and expressions.
-
             </p>
 
         </div>
@@ -1875,22 +1764,16 @@ footer {
         <div class="why-card">
 
             <div class="why-number">
-
                 03
-
             </div>
 
             <h3>
-
                 Confidence
-
             </h3>
 
             <p>
-
                 Develop confidence and
                 professional stage presence.
-
             </p>
 
         </div>
@@ -1900,22 +1783,16 @@ footer {
         <div class="why-card">
 
             <div class="why-number">
-
                 04
-
             </div>
 
             <h3>
-
                 Growth
-
             </h3>
 
             <p>
-
                 Improve your skills and
-                create your own modeling identity.
-
+                create your modeling identity.
             </p>
 
         </div>
@@ -1960,9 +1837,7 @@ footer {
         <div class="contact-item">
 
             <strong>
-
                 Instructor
-
             </strong>
 
             Pallavi
@@ -1973,9 +1848,7 @@ footer {
         <div class="contact-item">
 
             <strong>
-
                 Profession
-
             </strong>
 
             Model & Modeling Mentor
@@ -1986,9 +1859,7 @@ footer {
         <div class="contact-item">
 
             <strong>
-
                 Training
-
             </strong>
 
             Modeling & Personality Development
@@ -1998,6 +1869,8 @@ footer {
 
     </div>
 
+
+    <!-- Change email address here -->
 
     <a
         href="mailto:pallavi@example.com"
@@ -2018,9 +1891,7 @@ footer {
 <footer>
 
     <div class="footer-name">
-
         PALLAVI
-
     </div>
 
     Model • Mentor • Fashion
